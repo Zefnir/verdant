@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 import { ReactNode } from "react";
 import { WorkspaceList } from "./[workspaceId]/_components/WorkspaceList";
@@ -9,7 +8,12 @@ import { useEffect, useState, createContext } from "react";
 import type { Workspace } from "@/app/schemas/workspace";
 // import { UserNav } from "./_components/UserNav";
 
-export const WorkspaceContext = createContext<Workspace[] | null>(null);
+interface iWorkspaceContext {
+  data: Workspace[];
+  refresh: () => Promise<void>;
+}
+
+export const WorkspaceContext = createContext<iWorkspaceContext | null>(null);
 
 const WorkspaceLayout = ({ children }: { children: ReactNode }) => {
   const [workspace, setWorkspace] = useState<Workspace[]>([]);
@@ -24,7 +28,7 @@ const WorkspaceLayout = ({ children }: { children: ReactNode }) => {
     setWorkspace(data || []);
   };
   useEffect(() => {
-    fetchList();
+    Promise.resolve().then(fetchList);
   }, []);
   return (
     <div className="flex w-full h-screen">
@@ -37,7 +41,9 @@ const WorkspaceLayout = ({ children }: { children: ReactNode }) => {
 
         <div className="mt-auto">{/* <UserNav /> */}</div>
       </div>
-      <WorkspaceContext.Provider value={workspace}>
+      <WorkspaceContext.Provider
+        value={{ data: workspace, refresh: fetchList }}
+      >
         {children}
       </WorkspaceContext.Provider>
     </div>

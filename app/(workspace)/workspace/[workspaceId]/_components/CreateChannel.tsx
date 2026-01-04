@@ -1,6 +1,5 @@
 "use client";
 
-import { workspaceSchema, WorkspaceSchemaType } from "@/app/schemas/workspace";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -19,11 +18,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "@/components/ui/tooltip";
 import { Plus } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -32,16 +26,14 @@ import { channelSchema, ChannelSchemaType } from "@/app/schemas/channel";
 import { useParams } from "next/navigation";
 import { useContext } from "react";
 import { WorkspaceContext } from "../../layout";
-
-// type Props = {
-//   onCreated: () => void;
-// };
+import { ChannelContext } from "../layout";
 
 export function CreateChannel() {
   const workspace = useContext(WorkspaceContext);
   const params = useParams<{ workspaceId: string }>();
+  const channelContext = useContext(ChannelContext);
 
-  const currentWorkspace = workspace?.find(
+  const currentWorkspace = workspace?.data.find(
     (item) => item.id === params.workspaceId
   );
   const form = useForm({
@@ -68,8 +60,8 @@ export function CreateChannel() {
       console.log("Error creating channel");
     }
     console.log("yeh ngon");
+    channelContext?.refresh();
     form.reset();
-    // onCreated();
   }
 
   return (
@@ -80,7 +72,7 @@ export function CreateChannel() {
           Add Channel
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-106.25">
         <DialogHeader>
           <DialogTitle>Create Channel</DialogTitle>
           <DialogDescription className="text-muted-foreground">
