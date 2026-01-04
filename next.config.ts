@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
         hostname: "ik.imagekit.io",
         protocol: "https",
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+        protocol: "https",
+      },
+      {
+        hostname: "github.githubassets.com",
+        protocol: "https",
+      },
     ],
   },
 };
