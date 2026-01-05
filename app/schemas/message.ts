@@ -3,6 +3,10 @@ import z from "zod";
 export const createMessageSchema = z.object({
   channelId: z.string(),
   content: z.string(),
+  author_name: z.string(),
+  author_avatar: z.string(),
+  created_at: z.date(),
+  updated_at: z.date(),
 });
 
 export const updateMessageSchema = z.object({

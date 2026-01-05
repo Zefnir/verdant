@@ -1,13 +1,28 @@
+import { SafeContent } from "@/components/rich-text-editor/SafeContent";
 import Image from "next/image";
 
-interface iAppProps {
+interface iMessage {
   message: string;
   date: Date;
   avatar: string;
   userName: string;
 }
 
-export function MessageItem({ avatar, date, message, userName }: iAppProps) {
+function safeParseContent(content: string) {
+  if (!content) {
+    console.log("dm cuoc doi");
+  }
+
+  console.log("they la content", JSON.parse(content));
+
+  try {
+    return JSON.parse(content);
+  } catch {
+    return null;
+  }
+}
+
+export function MessageItem({ avatar, date, message, userName }: iMessage) {
   return (
     <div className="flex gap-2 relative p-3 rounded-lg group hover:bg-muted/50">
       <Image
@@ -33,7 +48,10 @@ export function MessageItem({ avatar, date, message, userName }: iAppProps) {
             }).format(date)}
           </p>
         </div>
-        <p className="text-md wrap-break-word max-w-none">{message}</p>
+        <SafeContent
+          className="text-sm break-word prose dark:prose-invert max-w-none mark:text-primary"
+          content={safeParseContent(message)}
+        />
       </div>
     </div>
   );
