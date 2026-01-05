@@ -15,7 +15,20 @@ interface iAppProps {
 export function RichTextEditor({ field, sendButton, footerLeft }: iAppProps) {
   const editor = useEditor({
     immediatelyRender: false,
+    content: (() => {
+      if (!field?.value) return "";
 
+      try {
+        return JSON.parse(field.value);
+      } catch {
+        return "";
+      }
+    })(),
+    onUpdate: ({ editor }) => {
+      if (field?.onChange) {
+        field.onChange(JSON.stringify(editor.getJSON()));
+      }
+    },
     extensions: editorExtensions,
     editorProps: {
       attributes: {
@@ -26,11 +39,16 @@ export function RichTextEditor({ field, sendButton, footerLeft }: iAppProps) {
   });
 
   return (
-    <div className="relative w-full border border-input rounded-lg overflow-hidden dark:bg-input/30 flex flex-col my-4">
-      <MenuBar editor={editor} />
-      <EditorContent editor={editor} className="overflow-y-auto " />
+    <div className="relative w-full border border-input rounded-lg overflow-hidden  flex flex-col my-4">
+      <div className="dark:bg-accent/50">
+        <MenuBar editor={editor} />
+      </div>
+      <EditorContent
+        editor={editor}
+        className="dark:bg-accent/30 overflow-y-auto"
+      />
 
-      <div className="flex items-center justify-between gap-2 px-3 py-2 border-t border-input ">
+      <div className="dark:bg-accent/50 flex items-center justify-between gap-2 px-3 py-2 border-t border-input ">
         <div className="min-h-8 flex items-center">{footerLeft}</div>
         <div className="shrink-0">{sendButton}</div>
       </div>

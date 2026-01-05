@@ -59,7 +59,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleBold().run()
                 }
                 className={cn(
-                  editorState?.isBold && "bg-muted text-muted-foreground"
+                  editorState?.isBold &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <Bold />
@@ -77,7 +78,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleItalic().run()
                 }
                 className={cn(
-                  editorState?.isItalic && "bg-muted text-muted-foreground"
+                  editorState?.isItalic &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <Italic />
@@ -95,7 +97,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleStrike().run()
                 }
                 className={cn(
-                  editorState?.isStrike && "bg-muted text-muted-foreground"
+                  editorState?.isStrike &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <Strikethrough />
@@ -113,7 +116,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleCodeBlock().run()
                 }
                 className={cn(
-                  editorState?.isCodeBlock && "bg-muted text-muted-foreground"
+                  editorState?.isCodeBlock &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <Code />
@@ -138,7 +142,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleBulletList().run()
                 }
                 className={cn(
-                  editorState?.isBulletList && "bg-muted text-muted-foreground"
+                  editorState?.isBulletList &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <ListIcon />
@@ -156,7 +161,8 @@ export function MenuBar({ editor }: MenuBarProps) {
                   editor.chain().focus().toggleOrderedList().run()
                 }
                 className={cn(
-                  editorState?.isOrderedList && "bg-muted text-muted-foreground"
+                  editorState?.isOrderedList &&
+                    "hover:bg-background/50 bg-background/50 text-muted-foreground"
                 )}
               >
                 <ListOrdered />
