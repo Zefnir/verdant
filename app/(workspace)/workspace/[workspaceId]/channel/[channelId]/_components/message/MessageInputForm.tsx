@@ -12,13 +12,15 @@ import {
   createMessageSchema,
   CreateMessageSchemaType,
 } from "@/app/schemas/message";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "next/navigation";
 import { channel } from "diagnostics_channel";
 import { supabase } from "@/lib/supabase/client";
+import { MessageContext } from "../../page";
 
 export function MessageInputForm() {
   const params = useParams<{ channelId: string }>();
+  const messageContext = useContext(MessageContext);
   const form = useForm({
     resolver: zodResolver(createMessageSchema),
     defaultValues: {
@@ -37,6 +39,7 @@ export function MessageInputForm() {
       console.error("No Channel Id in URL");
       return;
     }
+    console.log("CTX", messageContext);
 
     const payload = {
       content: data.content,
@@ -55,12 +58,12 @@ export function MessageInputForm() {
     if (error) {
       console.log("Error creating message");
     }
-
+    messageContext?.refresh();
     form.reset({ content: "" });
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form>
         <FormField
           control={form.control}
           name="content"
