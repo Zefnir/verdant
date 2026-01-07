@@ -21,6 +21,7 @@ import { MessageContext } from "../../page";
 export function MessageInputForm() {
   const params = useParams<{ channelId: string }>();
   const messageContext = useContext(MessageContext);
+  const [editorKey, setEditorKey] = useState(0);
   const form = useForm({
     resolver: zodResolver(createMessageSchema),
     defaultValues: {
@@ -59,11 +60,12 @@ export function MessageInputForm() {
       console.log("Error creating message");
     }
     messageContext?.refresh();
-    form.reset({ content: "" });
+    form.reset();
+    setEditorKey((prev) => prev + 1);
   }
   return (
     <Form {...form}>
-      <form>
+      <form id="message-form" onSubmit={form.handleSubmit(onSubmit)}>
         <FormField
           control={form.control}
           name="content"
@@ -71,9 +73,9 @@ export function MessageInputForm() {
             <FormItem>
               <FormControl>
                 <MessageComposer
+                  key={editorKey}
                   value={field.value}
                   onChange={field.onChange}
-                  onSubmit={() => onSubmit(form.getValues())}
                   isSubmitting={false}
                 />
               </FormControl>

@@ -24,7 +24,7 @@ export function WorkspaceList({ workspaceList }: Props) {
             <Tooltip key={item.id}>
               <TooltipTrigger asChild>
                 <Link href={`/workspace/${item.id}`}>
-                  <Button className="size-12 hover:cursor-pointer">
+                  <Button className="size-12 rounded-full hover:cursor-pointer">
                     <span className="text-sm font-semibold">
                       {item.name.charAt(0).toUpperCase()}
                     </span>

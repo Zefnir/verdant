@@ -142,6 +142,7 @@
   }
 
   pre {
+    background-color: var(--background);
     border-radius: 0.5rem;
     font-family: "JetBrainsMono", monospace;
     margin: 1.5rem 0;

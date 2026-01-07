@@ -58,7 +58,7 @@ export function CreateWorkspace({ onCreated }: Props) {
             <Button
               variant="ghost"
               size="icon"
-              className="size-12 rounded-xl border-2 border-dashed border-muted-foreground/50 text-muted-foreground hover:border-muted-foreground hover:text-foreground hover:rounded-lg hover:cursor-pointer transition-all duration-200"
+              className="size-12 rounded-full border-2 border-dashed border-muted-foreground/50 text-muted-foreground hover:border-muted-foreground hover:text-foreground hover:rounded-full hover:cursor-pointer transition-all duration-200"
             >
               <Plus className="size-5" />
             </Button>
