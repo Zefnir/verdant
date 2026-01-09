@@ -31,18 +31,10 @@ export function MessageList({ messages }: MessageListProps) {
               avatar={message.author_avatar}
               userName={message.author_name}
               key={message.id}
+              imageUrl={message.image_url}
             />
           ))
         )}
-        {/* {messages.map((message) => (
-          <MessageItem
-            message={message.content}
-            date={new Date(message.created_at)}
-            avatar={message.author_avatar}
-            userName={message.author_name}
-            key={message.id}
-          />
-        ))} */}
       </div>
     </div>
   );

@@ -29,11 +29,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session);
         setUser(session?.user ?? null);
-
-        return () => subscription.unsubscribe();
       });
+      return () => subscription.unsubscribe();
     });
-  });
+  }, []);
 
   return (
     <AuthContext.Provider value={{ session, user, loading }}>

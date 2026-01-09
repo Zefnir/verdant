@@ -27,6 +27,7 @@ const ChannelPageMain = () => {
 
     setMessage(data ?? []);
   }, [params.channelId]);
+  console.log("sfdasefea", message);
 
   useEffect(() => {
     Promise.resolve().then(fetchMessage);
