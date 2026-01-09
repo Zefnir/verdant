@@ -16,6 +16,14 @@ const nextConfig: NextConfig = {
         hostname: "github.githubassets.com",
         protocol: "https",
       },
+      {
+        hostname: "lh3.googleusercontent.com",
+        protocol: "https",
+      },
+      {
+        hostname: "eecxuanzxnhtjztxdfaj.supabase.co",
+        protocol: "https",
+      },
     ],
   },
 };

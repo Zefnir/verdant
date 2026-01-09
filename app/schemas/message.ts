@@ -1,7 +1,7 @@
 import z from "zod";
 
 export const createMessageSchema = z.object({
-  channelId: z.string(),
+  channel_Id: z.string(),
   content: z.string(),
   author_name: z.string(),
   author_avatar: z.string(),
@@ -25,4 +25,5 @@ export type MessageRow = {
   author_avatar: string;
   created_at: Date;
   updated_at: Date;
+  image_url: string;
 };

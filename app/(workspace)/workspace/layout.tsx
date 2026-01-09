@@ -6,7 +6,7 @@ import { CreateWorkspace } from "./[workspaceId]/_components/CreateWorkspace";
 import { supabase } from "@/lib/supabase/client";
 import { useEffect, useState, createContext } from "react";
 import type { Workspace } from "@/app/schemas/workspace";
-// import { UserNav } from "./_components/UserNav";
+import { UserNav } from "./[workspaceId]/_components/UserNav";
 
 interface iWorkspaceContext {
   data: Workspace[];
@@ -39,7 +39,9 @@ const WorkspaceLayout = ({ children }: { children: ReactNode }) => {
           <CreateWorkspace onCreated={fetchList} />
         </div>
 
-        <div className="mt-auto">{/* <UserNav /> */}</div>
+        <div className="mt-auto">
+          <UserNav />
+        </div>
       </div>
       <WorkspaceContext.Provider
         value={{ data: workspace, refresh: fetchList }}

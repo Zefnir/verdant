@@ -6,14 +6,13 @@ interface iMessage {
   date: Date;
   avatar: string;
   userName: string;
+  imageUrl: string;
 }
 
 function safeParseContent(content: string) {
   if (!content) {
     console.log("dm cuoc doi");
   }
-
-  console.log("they la content", JSON.parse(content));
 
   try {
     return JSON.parse(content);
@@ -22,7 +21,13 @@ function safeParseContent(content: string) {
   }
 }
 
-export function MessageItem({ avatar, date, message, userName }: iMessage) {
+export function MessageItem({
+  avatar,
+  date,
+  message,
+  userName,
+  imageUrl,
+}: iMessage) {
   return (
     <div className="flex gap-2 relative p-3 rounded-lg group hover:bg-muted/50">
       <Image
@@ -52,6 +57,17 @@ export function MessageItem({ avatar, date, message, userName }: iMessage) {
           className="text-sm break-word prose dark:prose-invert max-w-none mark:text-primary"
           content={safeParseContent(message)}
         />
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            alt="image"
+            width={512}
+            height={512}
+            className="object-contain w-auto rounded-md max-h-80"
+          />
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
