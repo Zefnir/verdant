@@ -20,7 +20,7 @@ const ChannelPageMain = () => {
   const params = useParams();
 
   const fetchMessage = useCallback(async () => {
-    const { data, error } = await supabase
+    const { data } = await supabase
       .from("message")
       .select("*")
       .eq("channel_Id", params.channelId);

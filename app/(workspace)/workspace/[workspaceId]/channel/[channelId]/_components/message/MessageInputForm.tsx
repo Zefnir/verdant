@@ -19,13 +19,12 @@ import { useParams } from "next/navigation";
 import { supabase } from "@/lib/supabase/client";
 import { MessageContext } from "../../page";
 import { useAuth } from "@/app/provider/useAuth";
-import { ZodNullable } from "zod";
 
 export function MessageInputForm() {
   const params = useParams<{ channelId: string }>();
   const messageContext = useContext(MessageContext);
   const [editorKey, setEditorKey] = useState(0);
-  const { session, user, loading } = useAuth();
+  const { user } = useAuth();
   const [image, setImage] = useState<File | null>(null);
 
   const form = useForm({

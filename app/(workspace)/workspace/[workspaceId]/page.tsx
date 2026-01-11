@@ -12,7 +12,7 @@ import { CreateChannel } from "./_components/CreateChannel";
 export default function Channel() {
   return (
     <div className="bg-card p-16 from-30% h-screen flex flex-1">
-      <Empty className="border border-dashed from-muted/50 to-background h-full bg-gradient-to-b from-40%">
+      <Empty className="border border-dashed from-muted/50 to-background h-full bg-linear-to-b from-40%">
         <EmptyHeader>
           <EmptyMedia variant="icon">
             <Cloud />

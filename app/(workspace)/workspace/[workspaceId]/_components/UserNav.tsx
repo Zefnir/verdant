@@ -1,12 +1,11 @@
 import { useAuth } from "@/app/provider/useAuth";
 import { supabase } from "@/lib/supabase/client";
-import { LogOut } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export function UserNav() {
   const router = useRouter();
-  const { session, user, loading } = useAuth();
+  const { user } = useAuth();
   const logOutFunction = async () => {
     router.push("/");
     await supabase.auth.signOut();

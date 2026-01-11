@@ -3,8 +3,7 @@
 import { MessageRow } from "@/app/schemas/message";
 import { MessageItem } from "./message/MessageItem";
 import { EmptyState } from "@/components/general/EmptyState";
-import { supabase } from "@/lib/supabase/client";
-import { useEffect } from "react";
+
 
 interface MessageListProps {
   messages: MessageRow[];
