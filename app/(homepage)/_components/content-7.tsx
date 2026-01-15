@@ -6,39 +6,34 @@ export default function ContentSection() {
     <section className="py-16 md:py-32">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
         <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">
-          The Lyra ecosystem brings together our models.
+          <span className="text-lime-400">Ver</span>dant brings developers
+          together in one shared space.
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
           <div className="relative space-y-4">
             <p className="text-muted-foreground">
-              Gemini is evolving to be more than just the models.{" "}
-              <span className="text-accent-foreground font-bold">
-                It supports an entire ecosystem
-              </span>{" "}
-              — from products innovate.
+              It’s a real-time communication hub built for developers to chat,
+              collaborate in threads, share code and images, and turn ideas into
+              working software without the noise
             </p>
-            <p className="text-muted-foreground">
-              It supports an entire ecosystem — from products to the APIs and
-              platforms helping developers and businesses innovate
-            </p>
-
             <div className="grid grid-cols-2 gap-3 pt-6 sm:gap-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Zap className="size-4" />
-                  <h3 className="text-sm font-medium">Faaast</h3>
+                  <h3 className="text-sm font-medium">Real-time</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  It supports an entire helping developers and innovate.
+                  Built for instant conversations that keep developers in sync.
                 </p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Cpu className="size-4" />
-                  <h3 className="text-sm font-medium">Powerful</h3>
+                  <h3 className="text-sm font-medium">Thread</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  It supports an entire helping developers and businesses.
+                  Organize conversations with focused replies that stay easy to
+                  follow.
                 </p>
               </div>
             </div>
@@ -46,18 +41,11 @@ export default function ContentSection() {
           <div className="relative mt-6 sm:mt-0">
             <div className="bg-linear-to-b aspect-67/34 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
               <Image
-                src="/exercice-dark.webp"
+                src="/demo-login.png"
                 className="hidden rounded-[15px] dark:block"
-                alt="payments illustration dark"
-                width={1206}
-                height={612}
-              />
-              <Image
-                src="/exercice.png"
-                className="rounded-[15px] shadow dark:hidden"
-                alt="payments illustration light"
-                width={1206}
-                height={612}
+                alt="login"
+                width={1440}
+                height={1024}
               />
             </div>
           </div>

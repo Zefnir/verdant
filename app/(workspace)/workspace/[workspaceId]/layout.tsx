@@ -55,7 +55,7 @@ const ChannelListLayout = ({ children }: { children: ReactNode }) => {
     <>
       <div className="flex shrink-0 h-full w-80 flex-col bg-secondary border-r border-border gap-4 px-4 py-4">
         <p className="text-2xl font-bold">
-          <span className="text-lime-400">Ver</span>dant
+          <span className="text-lime-600">Ver</span>dant
         </p>
         <div>
           <ChannelContext.Provider
