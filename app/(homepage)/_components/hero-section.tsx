@@ -1,12 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { HeroHeader } from "./header";
-import HeroDark from "@/public/screenshot.png";
+import MessageSection from "@/public/demo-message.png";
+import NextJs from "@/public/nextjs-svgrepo-com.svg";
+import Typescript from "@/public/typescript-svgrepo-com.svg";
+import Supabase from "@/public/supabase-logo-wordmark--dark.png";
+import ShadCn from "@/public/images.png";
+import Tailwind from "@/public/tailwind-svgrepo-com.svg";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import ContentSection from "./content-7";
@@ -87,38 +88,15 @@ export default function HeroSection() {
               className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]"
             />
 
-            <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto max-w-8xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-                <AnimatedGroup variants={transitionVariants}>
-                  <Link
-                    href="#link"
-                    className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-                  >
-                    <span className="text-foreground text-sm">
-                      Introducing Support for AI Models
-                    </span>
-                    <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
-
-                    <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                      <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                        <span className="flex size-6">
-                          <ArrowRight className="m-auto size-3" />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </AnimatedGroup>
-
                 <TextEffect
                   preset="fade-in-blur"
                   speedSegment={0.3}
                   as="h1"
                   className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]"
                 >
-                  Modern Solutions for Customer Engagement
+                  A Friendly Hub for All Developers
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -126,52 +104,11 @@ export default function HeroSection() {
                   speedSegment={0.3}
                   delay={0.5}
                   as="p"
-                  className="mx-auto mt-8 max-w-2xl text-balance text-lg"
+                  className="mx-auto mt-8 max-w-2xl text-balance text-xl"
                 >
-                  Highly customizable components for building modern websites
-                  and applications that look and feel the way you mean it.
+                  A welcoming place for developers to chat, share code and
+                  ideas, and build meaningful things together.
                 </TextEffect>
-
-                <AnimatedGroup
-                  variants={{
-                    container: {
-                      visible: {
-                        transition: {
-                          staggerChildren: 0.05,
-                          delayChildren: 0.75,
-                        },
-                      },
-                    },
-                    ...transitionVariants,
-                  }}
-                  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
-                >
-                  <div
-                    key={1}
-                    className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5"
-                  >
-                    <Button
-                      asChild
-                      size="lg"
-                      className="rounded-xl px-5 text-base"
-                    >
-                      <Link href="#link">
-                        <span className="text-nowrap">Start Building</span>
-                      </Link>
-                    </Button>
-                  </div>
-                  <Button
-                    key={2}
-                    asChild
-                    size="lg"
-                    variant="ghost"
-                    className="h-10.5 rounded-xl px-5"
-                  >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
-                    </Link>
-                  </Button>
-                </AnimatedGroup>
               </div>
             </div>
 
@@ -192,7 +129,7 @@ export default function HeroSection() {
                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                   <Image
                     className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                    src={HeroDark}
+                    src={MessageSection}
                     alt="app screen"
                     width="2700"
                     height="1440"
@@ -213,83 +150,56 @@ export default function HeroSection() {
         <section className="bg-background pb-16 md:pb-32 mt-16">
           <div className="group relative m-auto max-w-6xl px-6">
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:max-w-44 md:border-r md:pr-6">
-                <p className="text-end text-sm">Powering the best teams</p>
+              <div className="md:max-w-64 md:border-r md:pr-6">
+                <p className="text-end text-md">
+                  This web application is made with
+                </p>
               </div>
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
-                <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
+                <InfiniteSlider speedOnHover={20} speed={50} gap={112}>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                    <Image
+                      className="mx-auto dark:invert"
+                      src={NextJs}
                       alt="Nvidia Logo"
-                      height="20"
-                      width="auto"
-                    />
-                  </div>
-
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/column.svg"
-                      alt="Column Logo"
-                      height="16"
-                      width="auto"
+                      height="64"
+                      width="64"
                     />
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/github.svg"
-                      alt="GitHub Logo"
-                      height="16"
-                      width="auto"
+                    <Image
+                      className="mx-auto"
+                      src={Typescript}
+                      alt="Nvidia Logo"
+                      height="64"
+                      width="64"
                     />
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/nike.svg"
-                      alt="Nike Logo"
-                      height="20"
-                      width="auto"
+                    <Image
+                      className="mx-auto"
+                      src={Tailwind}
+                      alt="Nvidia Logo"
+                      height="64"
+                      width="64"
                     />
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                      alt="Lemon Squeezy Logo"
-                      height="20"
-                      width="auto"
+                    <Image
+                      className="mx-auto dark:invert"
+                      src={ShadCn}
+                      alt="Nvidia Logo"
+                      height="64"
+                      width="280"
                     />
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/laravel.svg"
-                      alt="Laravel Logo"
-                      height="16"
-                      width="auto"
-                    />
-                  </div>
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-7 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/lilly.svg"
-                      alt="Lilly Logo"
-                      height="28"
-                      width="auto"
-                    />
-                  </div>
-
-                  <div className="flex">
-                    <img
-                      className="mx-auto h-6 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/openai.svg"
-                      alt="OpenAI Logo"
-                      height="24"
-                      width="auto"
+                    <Image
+                      className="mx-auto"
+                      src={Supabase}
+                      alt="Nvidia Logo"
+                      height="64"
+                      width="300"
                     />
                   </div>
                 </InfiniteSlider>

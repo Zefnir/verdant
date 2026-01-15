@@ -78,7 +78,9 @@ export function MessageInputForm() {
       content: data.content,
       channel_Id: params.channelId,
       author_name: user?.user_metadata.full_name ?? "John Doe",
-      author_avatar: user?.user_metadata.avatar_url,
+      author_avatar:
+        user?.user_metadata.avatar_url ??
+        "https://avatars.githubusercontent.com/u/194279381?s=400&u=c7a0127b09c17e0de8f96d62dd9788b27185cbc6&v=4",
       created_at: new Date(),
       updated_at: new Date(),
       image_url: imageUrl,
@@ -95,7 +97,6 @@ export function MessageInputForm() {
     form.reset();
     setEditorKey((prev) => prev + 1);
   }
-
 
   return (
     <Form {...form}>

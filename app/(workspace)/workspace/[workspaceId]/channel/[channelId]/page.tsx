@@ -39,7 +39,7 @@ const ChannelPageMain = () => {
       <div className="flex flex-col flex-1 min-w-0">
         <ChannelHeader />
         {/* Scrollable Message Area */}
-        <div className="overflow-hidden">
+        <div className="flex overflow-hidden h-full">
           <MessageList messages={message} />
         </div>
         <div className="border-t px-4">
