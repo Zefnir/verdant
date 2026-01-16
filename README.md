@@ -26,7 +26,7 @@ A collaboration platform where users can communicate and share stuff with each o
 - 📜 **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
   > ⌛ _(Coming Soon)_
   
-- 🔐 Security
+- 🔐 **Security**
   - **Authentication**: User authentication handled by Supabase Auth (email/password), OAuth with Google, Github, and Microsoft
     
   - **Row Level Security (RLS)**: Database access restricted per user and workspace
@@ -39,6 +39,12 @@ A collaboration platform where users can communicate and share stuff with each o
     > ⌛ _(Coming Soon)_
 
 ## 🧙‍♂️ Process
+  ### Setup & Mental Model
+  ### Homepage
+  ### Database & Authentication
+  ### CRUD
+  ### Security
+  ### Current & Upcoming Updates
 
 ## ⚖️ Challenges
 
