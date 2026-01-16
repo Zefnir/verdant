@@ -22,6 +22,9 @@ A collaboration platform where users can communicate and share stuff with each o
   
 - 🧵 **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
   > 🚧 _(In progress)_
+
+- ⌚ **Realtime:** All content is automatically updated when changes are made
+  > 🚧 _(In progress)_
   
 - 📜 **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
   > ⌛ _(Coming Soon)_
