@@ -19,6 +19,8 @@ A collaboration platform where users can communicate and share stuff with each o
 
 ## ⚖️ Challenges
 
+## 👟 How to run
+
 ```bash
 npm run dev
 # or
