@@ -15,18 +15,26 @@ A collaboration platform where users can communicate and share stuff with each o
 
 ## ⭐ Features
 - 📺 **Create channel and workspace:** You can create channel and workspace to organize your content in seperate sections
+  
 - 💬 **Send Message:** Messages are organized based on your workspace and channel
+  
 - 🖼️ **Image Upload:** Basic image uploading function, optimized by Nextjs default behaviours
+  
 - 🧵 **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
-  > 🚧 _(In progress)_ 
+  > 🚧 _(In progress)_
+  
 - 📜 **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
   > ⌛ _(Coming Soon)_
+  
 - 🔐 Security
   - **Authentication**: User authentication handled by Supabase Auth (email/password), OAuth with Google, Github, and Microsoft
+    
   - **Row Level Security (RLS)**: Database access restricted per user and workspace
-    > 🚧 _(In progress)_ 
+    > 🚧 _(In progress)_
+    
   - **Protected Routes**: Only authenticated users can access private pages
-    > 🚧 _(In progress)_ 
+    > 🚧 _(In progress)_
+    
   - **Secure File Uploads**: Image uploads managed by Supabase Storage with access rules and size limit
     > ⌛ _(Coming Soon)_
 
