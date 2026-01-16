@@ -15,6 +15,10 @@ A collaboration platform where users can communicate and share stuff with each o
 
 ## ⭐ Features
 - **Create channel and workspace:** You can create channel and workspace to organize your content in seperate sections
+- **Send Message:** Messages are organized based on your workspace and channel
+- **Image Upload:** Basic image uploading function, optimized by Nextjs default behaviours
+- **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
+- **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
 
 ## 🧙‍♂️ Process
 
