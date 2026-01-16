@@ -1,5 +1,6 @@
-# Verdant 🌿
+# 🌿Verdant
 
+A collaboration platform where users can communicate and share stuff with each other. It serves as a small hub especially for developers to invite others and share their work. The app is mainly built for learning purposes as it has all the basic functions like CRUD and authentication. 
 
 First, run the development server:
 
