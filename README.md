@@ -24,8 +24,11 @@ A collaboration platform where users can communicate and share stuff with each o
 - 🔐 Security
   - **Authentication**: User authentication handled by Supabase Auth (email/password), OAuth with Google, Github, and Microsoft
   - **Row Level Security (RLS)**: Database access restricted per user and workspace
+    > 🚧 _(In progress)_ 
   - **Protected Routes**: Only authenticated users can access private pages
+    > 🚧 _(In progress)_ 
   - **Secure File Uploads**: Image uploads managed by Supabase Storage with access rules and size limit
+    > ⌛ _(Coming Soon)_
 
 ## 🧙‍♂️ Process
 
