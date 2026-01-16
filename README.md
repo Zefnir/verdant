@@ -14,6 +14,7 @@ A collaboration platform where users can communicate and share stuff with each o
 - `Supabase:` It's very convenient by solving authentication, image uploading, storing data and realtime function for me at the same time
 
 ## ⭐ Features
+- **Create channel and workspace:** You can create channel and workspace to organize your content in seperate sections
 
 ## 🧙‍♂️ Process
 
