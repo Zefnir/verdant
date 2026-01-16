@@ -18,9 +18,9 @@ A collaboration platform where users can communicate and share stuff with each o
 - **Send Message:** Messages are organized based on your workspace and channel
 - **Image Upload:** Basic image uploading function, optimized by Nextjs default behaviours
 - **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
-  > 🚧_(Coming Soon)_ 
+  > 🚧 _(Coming Soon)_ 
 - **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
-  > 🚧_(Coming Soon)_ 
+  > 🚧 _(Coming Soon)_ 
 
 ## 🧙‍♂️ Process
 
