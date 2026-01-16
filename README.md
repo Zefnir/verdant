@@ -1,4 +1,4 @@
-# Verdant
+# Verdant 🌿
 
 
 First, run the development server:
