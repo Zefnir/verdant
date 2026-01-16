@@ -13,6 +13,12 @@ A collaboration platform where users can communicate and share stuff with each o
   
 - `Supabase:` It's very convenient by solving authentication, image uploading, storing data and realtime function for me at the same time
 
+## ⭐ Features
+
+## 🧙‍♂️ Process
+
+## ⚖️ Challenges
+
 ```bash
 npm run dev
 # or
