@@ -43,6 +43,7 @@ A collaboration platform where users can communicate and share stuff with each o
 
 ## 🧙‍♂️ Process
   ### Setup & Mental Model
+  I started by imagining myself as an user who are looking for a small chatting app for their developer team, and verdant is happen to be the first place on their search engine (if verdant's SEO is good enough). The homepage is the first thing I encounter, so it must be impressive and informative enough to keep me engaged and try the application.
   
   ### Homepage
   
