@@ -43,18 +43,25 @@ A collaboration platform where users can communicate and share stuff with each o
 
 ## 🧙‍♂️ Process
   ### Setup & Mental Model
-  I started by imagining myself as an user who are looking for a small chatting app for their developer team, and verdant is happen to be the first place on their search engine (if verdant's SEO is good enough). The homepage is the first thing I encounter, so it must be impressive and informative enough to keep me engaged and try the application.
+  I started by putting myself in the shoes of a user looking for a lightweight chat application for their developer team. If Verdant appeared in their search results (assuming the SEO does its job), the homepage would be the first impression. Because of that, it needs to be both visually engaging and informative enough to encourage users to explore and try the application.
   
   ### Homepage
+  The homepage is built using a hero section template from [Tailark](https://tailark.com/hero-section) which I adapted to fit Verdant’s branding and purpose. The focus is on clearly communicating what the app does while maintaining a clean, modern layout that feels approachable to developers. Also it saves time to focus on other core functions of the app.
   
   ### Database & Authentication
+  Verdant uses Supabase for data storage and backend services, including image uploads, real-time functionality, and security features. As long as the configuration and syntax follow the official documentation, connecting to and fetching data is straightforward.
+  
+  Authentication is implemented using email/password as well as OAuth providers such as Google, GitHub, and Microsoft.
   
   ### CRUD
+  Core CRUD functionality is implemented using Supabase’s APIs. Most operations are simple to set up; however, integrating the rich text editor (Tiptap) required additional configuration and experimentation to get working smoothly.
   
   ### Security
+ Security is handled using Row Level Security (RLS) provided by Supabase, along with session-based authentication checks before allowing access to protected routes or mutations. Additional improvements, such as stricter image size limits and more thorough input sanitization are planned for future updates.
   
   ### Current & Upcoming Updates
-
+  At the moment, my main focus is polishing the application, with an emphasis on improving security. After that, I plan to implement features such as infinite scrolling, threads, and enhanced real-time interactions. There are many future ideas as well like task management, interface customization, better UI contrast, etc, but the priority is to complete and stabilize the core application before expanding its feature set.
+  
 ## ⚖️ Challenges
 
 
