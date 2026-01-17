@@ -1,6 +1,6 @@
 # 🌿Verdant
 
-A collaboration platform where users can communicate and share stuff with each other. It serves as a small hub especially for developers to invite others and share their work. The app is mainly built for learning purposes as it has all the basic functions like CRUD and authentication. 
+A collaboration platform where users can communicate and share stuff with each other. It serves as a small hub especially for developers to invite others and share their work. This web app is mainly built for learning purposes as it has all basic functions like CRUD and authentication. 
 
 ## 🔨 Main Technologies
 - `Nextjs:` A powerful framework that makes routing, SEO, organizing and much more stuff easier for me
