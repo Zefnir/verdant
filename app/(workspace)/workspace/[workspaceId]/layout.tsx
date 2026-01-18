@@ -19,6 +19,7 @@ import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
 import { Channel } from "@/app/schemas/channel";
 import Link from "next/link";
+import Image from "next/image";
 
 interface iChannelContext {
   data: Channel[];
@@ -54,9 +55,7 @@ const ChannelListLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <div className="flex shrink-0 h-full w-80 flex-col bg-secondary border-r border-border gap-4 px-4 py-4">
-        <p className="text-2xl font-bold">
-          <span className="text-lime-600">Ver</span>dant
-        </p>
+        <Image src="/logo-fixed.png" alt="Verdant" width={96} height={48} />
         <div>
           <ChannelContext.Provider
             value={{ data: channel, refresh: fetchChannel }}

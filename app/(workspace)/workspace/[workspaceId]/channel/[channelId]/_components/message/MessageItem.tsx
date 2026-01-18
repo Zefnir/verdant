@@ -11,7 +11,7 @@ interface iMessage {
 
 function safeParseContent(content: string) {
   if (!content) {
-    console.log("dm cuoc doi");
+    console.log("oops");
   }
 
   try {
