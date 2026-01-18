@@ -68,12 +68,8 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2 font-semibold text-4xl"
               >
-                <Image
-                  src="/logo-fixed.png"
-                  alt="Verdant"
-                  width={128}
-                  height={64}
-                />
+                <Image src="/leaf.png" alt="Verdant" width={48} height={48} />
+                <span className="text-lime-500">Ver</span>dant
               </Link>
 
               <button

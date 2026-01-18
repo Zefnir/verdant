@@ -55,7 +55,14 @@ const ChannelListLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <div className="flex shrink-0 h-full w-80 flex-col bg-secondary border-r border-border gap-4 px-4 py-4">
-        <Image src="/logo-fixed.png" alt="Verdant" width={96} height={48} />
+        <Link
+          href="/"
+          aria-label="home"
+          className="flex items-center space-x-2 font-semibold text-2xl"
+        >
+          <Image src="/leaf.png" alt="Verdant" width={36} height={36} />
+          <span className="text-lime-500">Ver</span>dant
+        </Link>
         <div>
           <ChannelContext.Provider
             value={{ data: channel, refresh: fetchChannel }}
