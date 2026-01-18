@@ -222,6 +222,12 @@ export default function HeroSection() {
                 />
               </div>
             </div>
+            <p className="text-muted-foreground pt-10">
+              Icons by{" "}
+              <a href="icons8.com" className="hover:text-primary">
+                Icons8
+              </a>
+            </p>
           </div>
         </section>
       </main>
