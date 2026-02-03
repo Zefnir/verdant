@@ -97,7 +97,14 @@ export function LoginForm({
                 />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>
+                <Button type="submit" className="hover: cursor-pointer">
+                  Login
+                </Button>
+                <Button variant="outline">
+                  <a href="https://verdant-drab.vercel.app/workspace">
+                    Continue as guest
+                  </a>
+                </Button>
               </Field>
               <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
                 Or continue with
