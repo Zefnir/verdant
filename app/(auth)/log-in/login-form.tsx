@@ -101,7 +101,7 @@ export function LoginForm({
                   Login
                 </Button>
                 <Button variant="outline" asChild>
-                  <a href="http://localhost:3000/workspace">
+                  <a href="https://verdant-drab.vercel.app/workspace">
                     Continue as guest
                   </a>
                 </Button>
