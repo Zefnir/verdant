@@ -47,9 +47,7 @@ A collaboration platform where users can communicate and share stuff with each o
   
   ### Homepage
   The homepage is built using a hero section template from [Tailark](https://tailark.com/hero-section) which I adapted to fit Verdant’s branding and purpose. The focus is on clearly communicating what the app does while maintaining a clean, modern layout that feels approachable to developers. Also it saves time to focus on other core functions of the app.
-  ![Preview](assets/background-5.jpg)
 
-  
   ### Database & Authentication
   Verdant uses Supabase for data storage and backend services, including image uploads, real-time functionality, and security features. As long as the configuration and syntax follow the official documentation, connecting to and fetching data is straightforward.
   
