@@ -107,7 +107,7 @@ export function SignupForm({
               </Field>
               <Field>
                 <Button type="submit">Create Account</Button>
-                <Button variant="outline">
+                <Button variant="outline" asChild>
                   <a href="https://verdant-drab.vercel.app/workspace">
                     Continue as guest
                   </a>

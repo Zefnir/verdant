@@ -100,8 +100,8 @@ export function LoginForm({
                 <Button type="submit" className="hover: cursor-pointer">
                   Login
                 </Button>
-                <Button variant="outline">
-                  <a href="https://verdant-drab.vercel.app/workspace">
+                <Button variant="outline" asChild>
+                  <a href="http://localhost:3000/workspace">
                     Continue as guest
                   </a>
                 </Button>
