@@ -62,6 +62,5 @@ A collaboration platform where users can communicate and share stuff with each o
   ### Current & Upcoming Updates
   At the moment, my main focus is polishing the application, with an emphasis on improving security. After that, I plan to implement features such as infinite scrolling, threads, and enhanced real-time interactions. There are many future ideas as well like task management, interface customization, better UI contrast, etc, but the priority is to complete and stabilize the core application before expanding its feature set.
   
-## ⚖️ Challenges
 
 
