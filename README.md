@@ -61,7 +61,25 @@ A collaboration platform where users can communicate and share stuff with each o
   
   ### Current & Upcoming Updates
   At the moment, my main focus is polishing the application, with an emphasis on improving security. After that, I plan to implement features such as infinite scrolling, threads, and enhanced real-time interactions. There are many future ideas as well like task management, interface customization, better UI contrast, etc, but the priority is to complete and stabilize the core application before expanding its feature set.
+
+## 🧠 Challenges & What I Learned
+
+### 1️⃣ Designing a Scalable Data Model
+
+One of the biggest challenges was structuring the database correctly for workspaces, channels, messages, users, and future threads. Initially, I focused on making CRUD operations work as quickly as possible. However, I realized that without a carefully planned schema, adding features like threads or real-time updates would introduce unnecessary complexity and fragile logic. This forced me to step back and think more about relationships, constraints, and long-term scalability instead of just immediate functionality.
+
+### 2️⃣ Managing Real-Time State
+
+Implementing real-time updates introduced challenges around state synchronization. When multiple users interact within the same channel, the UI must remain consistent without causing duplicate renders, race conditions, or stale state issues. While the responsiveness and optimization are still areas I plan to improve, building this feature helped me understand the core principles behind real-time systems and client-server synchronization. It also made me more aware of performance considerations in interactive applications.
+
+### 3️⃣ Transitioning Fully to TypeScript
+
+Although I was already comfortable with JavaScript, fully committing to TypeScript changed how I approach development. Defining explicit types forced me to think more clearly about data structures, edge cases, and API contracts between frontend and backend. Instead of reacting to runtime bugs, I began preventing them at compile time, which improved both code quality and confidence during refactoring.
+
+### 🚀 Overall Reflection
+
+Building Verdant pushed me beyond simply making features work. It required thinking about architecture, security boundaries, scalability, and maintainability from the beginning. Throughout this project, I learned to approach problems more systematically, considered data flow, constraints, and long-term implications rather than short-term fixes.
+
   
-## ⚖️ Challenges
 
 
