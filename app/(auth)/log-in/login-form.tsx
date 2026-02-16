@@ -16,6 +16,7 @@ import Image from "next/image";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function LoginForm({
   className,
@@ -143,7 +144,7 @@ export function LoginForm({
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                Don&apos;t have an account? <a href="#">Sign up</a>
+                Don&apos;t have an account? <Link href="/sign-up">Sign Un</Link>
               </FieldDescription>
             </FieldGroup>
           </form>

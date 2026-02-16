@@ -60,7 +60,7 @@ const ChannelListLayout = ({ children }: { children: ReactNode }) => {
           aria-label="home"
           className="flex items-center space-x-2 font-semibold text-2xl"
         >
-          <Image src="/leaf.png" alt="Verdant" width={36} height={36} />
+          <Image src="/new-logo.png" alt="Verdant" width={36} height={36} />
           <span className="text-lime-500">Ver</span>dant
         </Link>
         <div>
