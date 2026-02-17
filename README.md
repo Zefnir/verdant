@@ -20,10 +20,9 @@ A collaboration platform where users can communicate and share stuff with each o
   
 - 🖼️ **Image Upload:** Basic image uploading function, optimized by Nextjs default behaviours
   
-- 🧵 **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
-  > 🚧 _(In progress)_
-
 - ⌚ **Realtime:** All content is automatically updated when changes are made
+
+- 🧵 **Thread:** Thread appears when you reply to another message, it should displayed on the right of the screen
   > 🚧 _(In progress)_
   
 - 📜 **Task Manager:** A small place to organize all your tasks, this is useful for developers in general
@@ -33,7 +32,7 @@ A collaboration platform where users can communicate and share stuff with each o
   - **Authentication**: User authentication handled by Supabase Auth (email/password), OAuth with Google, Github, and Microsoft
     
   - **Row Level Security (RLS)**: Database access restricted per user and workspace
-    > 🚧 _(In progress)_
+    >  For the purpose of testing, RLS is disabled for now
     
   - **Protected Routes**: Only authenticated users can access private pages
     > 🚧 _(In progress)_
@@ -65,7 +64,7 @@ After some research, I found that both approaches have their pros and cons. For 
   ### Database & Authentication
   Verdant uses Supabase for data storage and backend services, including image uploads, real-time functionality, and security features. As long as the configuration and syntax follow the official documentation, connecting to and fetching data is straightforward.
   
-  Authentication is implemented using email/password as well as OAuth providers such as Google, GitHub, and Microsoft.
+  Authentication is implemented using email/password as well as OAuth providers such as Google.
   
   ### CRUD
   Core CRUD functionality is implemented using Supabase’s APIs. Most operations are simple to set up; however, integrating the rich text editor (Tiptap) required additional configuration and experimentation to get working smoothly.
@@ -80,7 +79,10 @@ After some research, I found that both approaches have their pros and cons. For 
 
 ### 1️⃣ Designing a Scalable Data Model
 
-One of the biggest challenges was structuring the database correctly for workspaces, channels, messages, users, and future threads. Initially, I focused on making CRUD operations work as quickly as possible. However, I realized that without a carefully planned schema, adding features like threads or real-time updates would introduce unnecessary complexity and fragile logic. This forced me to step back and think more about relationships, constraints, and long-term scalability instead of just immediate functionality.
+One of the biggest challenges was structuring the database correctly for workspaces, channels, messages, users, and future threads. Initially, I focused on making CRUD operations work as quickly as possible. However, I realized that without a carefully planned schema, adding features like threads or real-time updates would introduce unnecessary complexity and fragile logic. This forced me to step back and think more about relationships, constraints, and long-term scalability instead of just immediate functionality. Also, naming columns in database is also a thing, I also messed up some column naming at first, like "channelId" fighting with "channel_Id", a small thing but it taught me the importance of consistent naming convention and better practices.
+
+![Database](./public/database.jpg)
+
 
 ### 2️⃣ Managing Real-Time State
 
