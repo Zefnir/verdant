@@ -44,6 +44,19 @@ A collaboration platform where users can communicate and share stuff with each o
 ## 🧙‍♂️ Process
   ### Setup & Mental Model
   I started by putting myself in the shoes of a user looking for a lightweight chat application for their developer team. If Verdant appeared in their search results (assuming the SEO does its job), the homepage would be the first impression. Because of that, it needs to be both visually engaging and informative enough to encourage users to explore and try the application.
+
+Next, I thought of the development flow. Should it be:
+
+Low-fidelity wireframe → Front-End → Database → Back-End → Security → Production
+
+or
+
+Low-fidelity wireframe → Back-End → Security → Front-End → Production
+
+After some research, I found that both approaches have their pros and cons. For the simplicity of this learning project, I chose to build the front end before the back end, as it better suits my learning style and preference.
+![Low-fidelity wireframe](./public/low-fidelity.jpg)
+
+  
   
   ### Homepage
   The homepage is built using a hero section template from [Tailark](https://tailark.com/hero-section) which I adapted to fit Verdant’s branding and purpose. The focus is on clearly communicating what the app does while maintaining a clean, modern layout that feels approachable to developers. Also it saves time to focus on other core functions of the app.
