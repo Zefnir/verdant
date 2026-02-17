@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AuthProvider>{children}</AuthProvider>
-          <Toaster closeButton position="top-center" />
+          <Toaster closeButton />
         </ThemeProvider>
       </body>
     </html>

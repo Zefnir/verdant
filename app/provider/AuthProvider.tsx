@@ -1,10 +1,9 @@
 "use client";
 
 import { supabase } from "@/lib/supabase/client";
-// This one serves as a auth provider to give all components data about user's session
-
 import { Session, User } from "@supabase/supabase-js";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useRef } from "react";
+import { toast } from "sonner";
 
 type AuthContext = {
   session: Session | null;
@@ -19,19 +18,35 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // prevent double toast
+  const hasShownToast = useRef(false);
+
   useEffect(() => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+
+      if (event === "SIGNED_IN" && !hasShownToast.current) {
+        toast.success("Logged in successfully");
+        hasShownToast.current = true;
+      }
+    });
+
     supabase.auth.getSession().then(({ data }) => {
       setSession(data.session);
       setUser(data.session?.user ?? null);
+
+      if (data.session && !hasShownToast.current) {
+        toast.success("Logged in successfully");
+        hasShownToast.current = true;
+      }
+
       setLoading(false);
-      const {
-        data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
-        setSession(session);
-        setUser(session?.user ?? null);
-      });
-      return () => subscription.unsubscribe();
     });
+
+    return () => subscription.unsubscribe();
   }, []);
 
   return (

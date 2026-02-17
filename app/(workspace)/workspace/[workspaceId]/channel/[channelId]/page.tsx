@@ -23,7 +23,8 @@ const ChannelPageMain = () => {
     const { data } = await supabase
       .from("message")
       .select("*")
-      .eq("channel_Id", params.channelId);
+      .eq("channel_Id", params.channelId)
+      .order("created_at", { ascending: true });
 
     setMessage(data ?? []);
   }, [params.channelId]);
@@ -32,6 +33,33 @@ const ChannelPageMain = () => {
   useEffect(() => {
     Promise.resolve().then(fetchMessage);
   }, [fetchMessage]);
+
+  useEffect(() => {
+    if (!params.channelId) return;
+
+    console.log("Subscribing to realtime for:", params.channelId);
+
+    const channel = supabase.channel(`realtime-channel-${params.channelId}`).on(
+      "postgres_changes",
+      {
+        event: "INSERT",
+        schema: "public",
+        table: "message",
+      },
+      (payload) => {
+        setMessage((prev) => {
+          if (prev.some((msg) => msg.id === payload.new.id)) {
+            return prev;
+          }
+          return [...prev, payload.new as MessageRow];
+        });
+      },
+    );
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, [params.channelId]);
 
   return (
     <div className="flex h-screen w-full bg-sidebar">
