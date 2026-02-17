@@ -55,7 +55,6 @@ Low-fidelity wireframe → Back-End → Security → Front-End → Production
 After some research, I found that both approaches have their pros and cons. For the simplicity of this learning project, I chose to build the front end before the back end, as it better suits my learning style and preference.
 
 
-![Low-fidelity wireframe](./public/low-fidelity.jpg)
 
   
   ### Homepage
