@@ -81,7 +81,7 @@ After some research, I found that both approaches have their pros and cons. For 
 
 One of the biggest challenges was structuring the database correctly for workspaces, channels, messages, users, and future threads. Initially, I focused on making CRUD operations work as quickly as possible. However, I realized that without a carefully planned schema, adding features like threads or real-time updates would introduce unnecessary complexity and fragile logic. This forced me to step back and think more about relationships, constraints, and long-term scalability instead of just immediate functionality. Also, naming columns in database is also a thing, I also messed up some column naming at first, like "channelId" fighting with "channel_Id", a small thing but it taught me the importance of consistent naming convention and better practices.
 
-![Database](./public/database.jpg)
+![Database](./public/database.png)
 
 
 ### 2️⃣ Managing Real-Time State
